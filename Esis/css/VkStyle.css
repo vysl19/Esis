@@ -1,0 +1,180 @@
+﻿@font-face {
+    font-family: cambria;
+    src: url(../fonts/Cambria.ttf);
+}
+@font-face {
+    font-family: din-body;
+    src: url(../fonts/DIN-Medium.otf);
+}
+
+.fontcambria {
+    font-family: cambria;
+    font-size:large;
+}
+.fontDinBody {
+    font-family: din-body;
+    font-size: small;
+}
+.mainTitleColor {
+    color: #005E96 !important;
+}
+.mainBackgroundColor {
+    background-color: #005E96;
+}
+@media (min-width: 768px) {
+    img.logo {
+        display:block;
+    }
+}
+@media (max-width: 767px) {
+    img.logo {
+        display: none;
+    }
+}
+.sector-bg-color {
+    background-color: #FAFAFA;
+}
+.service-bg-color {
+    background-color: #757575;
+}
+.sector-bg-color1 {
+    background-color: #FAFAFA;
+}
+
+.service-bg-color1 {
+    background-color: #6C757D;
+}
+.footer-bg-color {
+    background-color: #6C757D;
+}
+tr.marginRow {
+    padding: 0px !important;
+}
+.side-bg-color {
+    background-color: #6C757D;
+}
+.contact-bg-color {
+    background-color: #E0E0E0;
+}
+.inner {
+    width: 80%;    
+    margin: 0px auto;
+    margin-bottom:5px;
+    border-bottom: 1px solid #969696;
+}
+.tdSubMenu {
+    margin-top:1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid !important;
+}
+.tdLastSubMenu {
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;    
+}
+div.divContent{
+    margin-left:2%;    
+}
+div.divContent p, span, li {
+    font-family: din-body;
+    font-size: large;
+}
+    div.divContent p {
+        font-family: din-body;
+        font-size: large;
+        color: #212529;
+    }
+    div.divContent span {
+        font-family: din-body;
+        font-size: large;
+        color: #212529;
+    }
+    div.divContent li {
+        font-family: din-body;
+        font-size: large;
+        color: #212529;
+    }
+    
+
+
+div.divContent span {
+    color:#005E96 ;
+}
+div.divContent ul{
+margin-bottom:3%;
+ }
+div.divContent ul li {
+        list-style-type: disc;
+        margin-left: 6%;
+}
+div.divContent p {
+margin-top:3%;        
+}
+.tdFooterMobile {
+    border-bottom: 1px solid white !important;
+}
+.tdFooterWindows {
+    border-right: 1px solid white !important;
+}
+#ServiceSideMenu{
+    margin-top:2%;
+}
+#SectorSideMenu{
+    margin-top:2%;
+}
+#tbfooterContact td{
+    padding:3px;
+}
+.top-header {
+    background: #005E96 none repeat scroll 0 0;
+    
+}
+.social-grid li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+}
+
+    .social-grid li a:hover {
+        color: #ff4157;
+    }
+
+.social-grid li + li {
+    margin-left: 25px;
+}
+/*social link*/
+.social-grid ul li {
+    display: inline;
+}
+.menuBackground {
+    background-color: #6C757D;
+    /*filter: contrast(100);*/
+}
+#footerContact td{
+    font-size:7px;
+}
+#footerContact  span {
+    font-size: 13px;
+}
+.Hometitles{
+    color:#005E96;
+    font-weight:bold;
+    font-size:19px;
+}
+.homeText{
+    font-size:15px;
+}
+.hoverSideMenu:hover {
+    color: #005E96;
+}
+.navHeight{
+    max-height:66px;
+}
+.menuColor:hover {
+    color:#005E96;
+}
+.menuColor {
+    color: #fff;
+}

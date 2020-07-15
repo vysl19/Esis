@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>ESİS Danışmanlık</title>    
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="contactcss/main.css">
+    <link rel="stylesheet" href="contactCss/util.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/VkStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .imageCircle {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            background-color: #555;
+        }
+
+        .container-fluid1 {
+            width: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            position: relative;
+        }
+
+        .sticky.is-sticky {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            /*min-height:75px;*/
+        }
+
+
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        /*footer {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            position:absolute;
+            width:100%;
+        }*/
+        .megamenu-li {
+            position: static;
+        }
+
+        .megamenu {
+            position: absolute;
+            width: 50%;
+            left: 0;
+            right: 0;
+            padding: 15px;
+        }
+
+
+
+        #service {
+            padding: 83px 0px;
+        }
+
+        .service_area {
+            padding: 40px 0 40px;
+        }
+
+        .service_section {
+        }
+
+        .service_block {
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .service_icon {
+            border: 2px solid #f56eab;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            margin: 0px auto 25px;
+        }
+
+            .service_icon.icon2 {
+                border: 2px solid #7cc576;
+            }
+
+            .service_icon.icon3 {
+                border: 2px solid #49b5e7;
+            }
+
+            .service_icon span {
+                background: #f56eab;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
+            .service_icon.icon2 span {
+                background: #7cc576;
+            }
+
+            .service_icon.icon3 span {
+                background: #49b5e7;
+            }
+
+            .service_icon i {
+                color: #fff;
+                font-size: 40px;
+                margin-top: 0;
+                position: relative;
+                top: 14px;
+                z-index: 20;
+            }
+
+        .service_block h3 {
+            font-family: 'Dosis';
+            font-weight: 600;
+            font-size: 18px;
+            color: #111111;
+            margin: 35px 0 18px;
+        }
+
+        .service_block p {
+            font-size: 16px;
+            color: #888888;
+            margin: 0px;
+        }
+
+        .testSize {
+            width: 250px;
+        }
+
+        /*@media (min-width: 768px) {
+            .header {
+                background: url('../images/esis_banner_01.jpeg') no-repeat fixed;
+                background-size: cover;
+                position: relative;
+            }
+        }*/
+        .main-container {
+            min-height: 99%;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="main-container">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 social-grid" id="leftTopSocial">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="social-grid">
+                            <ul class="list-unstyled text-right">
+                                <li><a id="aFacebook" class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a id="aTwitter" class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <!--<li><a><i class="fa fa-linkedin"></i></a></li>-->
+                                <li><a id="aInstagram" class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a id="aLinkedin" class="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="social-grid text-left">
+                            <ul class="list-unstyled text-right text-white">
+                                <li><a id="aTurkish" href="#">Türkçe</a></li>
+                                <li><a id="aEnglish" href="#">English</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="container-fluid1">
+        <div class="row table-responsive bg-dark">
+            <table class="table mw-100 text-white">
+                <tr>
+                    <td class="col-9">
+                    </td>
+                    <td class="col-1">
+                        <a id="aFacebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </td>
+                    <td class="col-1">
+                        <a id="aTwitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </td>
+                    <td class="col-1">
+                        <a id="aInstagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            </div>-->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5 mx-auto">
+                        <div id="topLogo"><a class="pagevk_a" data-id='Home' href="#"><img src="img/EYD_logo_02-01.png" style="max-width: 100%;max-height: 100%;" /></a></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid1">
+                <nav id="navbar" class="navbar navbar-expand-md bg-secondary navbar-dark navHeight" data-toggle="sticky-onscroll">
+                    <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div><a class="pagevk_a d-none" data-id='Home' href="#" id="liLogo"><img class="mw-100" src="img/esis_yatay_beyaz.png" style="height:66px" /></a></div>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item mx-xl-5"><a class="nav-link pagevk_a fontcambria" data-id='Home' id="aHome" href="#"><i class="fas fa-home fa-lg"></i></a></li>
+                                <li class="nav-item mx-xl-5"><a class="nav-link pagevk_a fontcambria" data-id='About' href="#" data-text="OurAbout"></a></li>
+                                <li class="nav-item dropdown mx-xl-5">
+                                    <a class="nav-link dropdown-toggle fontcambria" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-text="OurServices"></a>
+                                    <div class="dropdown-menu service-bg-color1 text-white my-2" aria-labelledby="dropdown01">
+
+                                        <div id="ServiceMenu" class="table-responsive">
+                                            <!--<table class="table w-100">
+                                                <tr>
+                                                    <td class="col-6 text-nowrap">
+                                                        HİBE/FON YÖNETİMİ DANIŞMANILIĞI
+                                                    </td>
+                                                    <td class="col-6 text-nowrap">
+                                                        HİBE/FON YÖNETİMİ DANIŞMANILIĞI
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-6 text-nowrap">
+                                                        HİBE/FON YÖNETİMİ DANIŞMANILIĞI
+                                                    </td>
+                                                    <td class="col-6">
+                                                        HİBE/FON YÖNETİMİ DANIŞMANILIĞI
+                                                    </td>
+                                                </tr>
+
+                                            </table>-->
+                                            <!--<div class="text-center">
+                                                <h5>HİBE/FON YÖNETİMİ DANIŞMANILIĞI</h5>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis1" href="#">Hizmetler1_1</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis1" href="#">Hizmetler1_2</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis1" href="#">Hizmetler1_3</a>
+                                                <h5>HİBE/FON YÖNETİMİ DANIŞMANILIĞI</h5>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis2" href="#">Hizmetler2_1</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis2" href="#">Hizmetler2_2</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis2" href="#">Hizmetler2_3</a>
+                                                <h5>HİBE/FON YÖNETİMİ DANIŞMANILIĞI</h5>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis3" href="#">Hizmetler3_1</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis3" href="#">Hizmetler3_2</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Servis3" href="#">Hizmetler3_3</a>
+                                            </div>-->
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown mx-xl-5">
+                                    <a class="nav-link dropdown-toggle fontcambria" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-text="OurSectors"></a>
+                                    <div class="dropdown-menu service-bg-color1 text-white my-2" aria-labelledby="dropdown01">
+                                        <!--<div class="row">
+                                            <div class="text-center">
+                                                <h5>Endüstriyel1</h5>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial1" href="#">Endüstriyel1_1</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial1" href="#">Endüstriyel1_2</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial1" href="#">Endüstriyel1_3</a>
+                                                <h5>Endüstriyel2</h5>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial2" href="#">Endüstriyel2_1</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial2" href="#">Endüstriyel2_2</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial2" href="#">Endüstriyel2_3</a>
+                                                <h5>Endüstriyel3</h5>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial3" href="#">Endüstriyel3_1</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial3" href="#">Endüstriyel3_2</a>
+                                                <a class="dropdown-item pagevk_a" data-id="Industrial4" href="#">Endüstriyel3_3</a>
+                                            </div>
+                                        </div>-->
+                                        <div id="SectorMenu" class="table-responsive">
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-xl-5"><a class="nav-link pagevk_a fontcambria" data-id='Contact' href="#" data-text="Contact"></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        <div id="singleBody">
+            <div id="divHome" class="pagevk">
+                <img class="logo mw-100" src="images/esis_banner_01.jpeg" />
+                <section id="service" class="p-1">
+                    <div class="container" id="secHome">
+
+                    </div>
+                </section>
+            </div>
+            <div id="divAbout" class="pagevk" style="display:none">
+                <section id="secAbout" class="section-padding wow fadeIn delay-05s mt-2">
+                    <div class="container">
+                        <div class="row divContent">
+                            <div class="col-4 divaboutImage" id="colAboutImage">
+                                <img id="aboutImage" class="mw-100" />
+                            </div>
+                            <div class="col-8" id="colAbout">
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <!--<div id="service" class="pagevk" style="display:none">
+                <section id="about2" class="section-padding wow fadeIn delay-05s">
+                    <div class="container">
+                        <h3>Hakkımızda</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </section>
+            </div>-->
+
+
+            <div id="divService" class="pagevk" style="display:none">
+                <section class="section-padding wow fadeIn delay-05s">
+                    <div class="table-responsive">
+                        <div class="container">
+                            <table class="table">
+                                <tr class="d-flex mw-100">
+                                    <td id="ServiceSideMenu">
+                                    </td>
+                                    <td id="ServiceHtml" class="col-7">
+                                    </td>
+                                    <td class="col-1">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="divSector" class="pagevk" style="display:none">
+                <section class="section-padding wow fadeIn delay-05s">
+                    <div class="table-responsive">
+                        <div class="container">
+                            <table class="table">
+                                <tr class="d-flex mw-100">
+                                    <td id="SectorSideMenu">
+                                    </td>
+                                    <td id="SectorHtml" class="col-7">
+                                    </td>
+                                    <td class="col-1">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="divContact" class="pagevk" style="display:none">
+                <section class="section-padding wow fadeIn delay-05s">
+                    <div class="table-responsive">
+                        <div class="container">
+                            <table class="table">
+                                <tr class="d-flex mw-100">
+                                    <td id="LeftContact" class="col-6">
+                                    </td>
+                                    <td id="RightContact" class="col-6">
+                                        <table class="table-borderless contact-bg-color col-12">
+                                            <thead>
+                                                <tr class="m-0 p-0">
+                                                    <th class="mainTitleColor">
+                                                        BİZİMLE İLETİŞİME GEÇİN
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="m-0 p-0">
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <label class="m-0 p-0" for="NameSurname" title="NameSurname">AD-SOYAD:</label>
+                                                            <input class="form-control" id="NameSurname" name="NameSurname" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="m-0 p-0">
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <label class="m-0 p-0" Title="Email" for="Email">E-MAIL ADRES:</label>
+                                                            <input class="form-control" id="Email" name="Email" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="m-0 p-0">
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <label class="m-0 p-0" for="PhoneNumber" title="PhoneNumber">TELEFON NUMARASI:</label>
+                                                            <input class="form-control" id="Email" name="Email" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="m-0 p-0">
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <label class="m-0 p-0" for="Message" title="Message">MESAJINIZ:</label>
+                                                            <textarea class="form-control" rows="5" id="Message" name="Message"></textarea>
+                                                        </div>
+                                                        <div class="row">
+                                                            <button type="submit" class="btn mainBackgroundColor text-white mx-auto">GÖNDER</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+
+    </div>
+    <footer>
+        <div class="pt-5 border-bottom">
+            <div class="row footer-bg-color" id="footerContact">
+                <div class="container">
+                    <div class="footer table-responsive">
+                        <table class="table table-borderless" id="tbfooterContact">
+                            <tr class="d-flex mw-100" id="trfooterContact">
+                                <td class="text-white align-self-center tdFooterWindows p-0" id="tdFooterLogo">
+                                    <table>
+                                        <tr>
+                                            <td class="p-0 text-center">
+                                                <a class="pagevk_a" data-id='Home' href="#"><img src="img/esis_yatay_beyaz.png" style="max-width: 70%;max-height: 100%;" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-0">
+                                                <div class="social-grid">
+                                                    <ul class="list-unstyled text-center">
+                                                        <li><a id="aFacebook" class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a id="aTwitter" class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                        <!--<li><a><i class="fa fa-linkedin"></i></a></li>-->
+                                                        <li><a id="aInstagram" class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a id="aLinkedin" class="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--<div class="col-2">
+                    <img src="img/EYD_logo_02-01.png" style="max-width: 100%;max-height: 100%;" />
+                </div>-->
+            </div>
+            <div class="row">
+                <span class="mx-auto" id="FooterRight">&#169; Tüm Hakları Saklıdır</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/homePage2.js"></script>
+    <script src="js/contact2.js"></script>
+    <script type="module" src="js/Menu2.js"></script>
+    <script src="js/about2.js"></script>
+    <script src="js/socialMedia.js"></script>
+    <script src="js/Meta.js"></script>
+    <script src="js/string.js"></script>
+    <!--<script src="js/slim.min.js"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>

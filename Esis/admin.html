@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Admin</title>
+    <!-- Custom fonts for this template-->
+    <link href="adminCss/all.min.css" rel="stylesheet" type="text/css">
+    <link href="adminCss/fonts.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="adminCss/sb-admin-2.css" rel="stylesheet">
+    <link href="css/VkStyle.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Admin</div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>AnaSayfa'ya Git</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Sayfalar
+            </div>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Alt Menu</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="#" id="aSubMenu">Alt Menu Güncelle</a>
+                        <a class="collapse-item" href="#" id="aSubMenuAdd">Alt Menu Ekle</a>
+                        <a class="collapse-item" href="#" id="aSubMenuDelete">Alt Menu Sil</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" id="aCache">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Cache Sil</span>
+                </a>
+            </li>
+            <!--Con
+    <!--Hakkımızda-->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" id="aAbout">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Hakkımızda</span>
+                </a>
+            </li>
+            <!--Contact-->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" id="aContact">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>İletişim</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" id="aSocialMedia">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Social Media</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" id="aMail">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Mail</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" id="aMeta">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Meta</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1" aria-expanded="true" aria-controls="collapseUtilities1">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Çeviriler</span>
+                </a>
+                <div id="collapseUtilities1" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="#" id="aTranslate">Dil Çevirisi Yap</a>
+                        <a class="collapse-item" href="#" id="aTranslationList">Yapılmış Çeviriler</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <!--Slider-->
+                <div class="container-fluid" id="divSubMenu">
+
+                    <div>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ana Menu</label>
+                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="MainMenus">
+                        </select>
+
+                    </div>
+                    <br />
+                    <div>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Alt Menu</label>
+                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="SubMenus">
+                        </select>
+
+                    </div>
+                    <br />
+                    <label for="editor1">İçerik</label>
+                    <textarea name="editor1" id="editor1" rows="10" cols="80">                
+            </textarea>
+                    <br />
+                    <label for="SubMenuTitle">Başlik</label>
+                    <input type="text" id="SubMenuTitle" name="SubMenuTitle" class="w-100" />
+                    <br />
+                    <br />
+
+                    <label for="SubMenuDescription">Açıklama</label>
+                    <textarea name="SubMenuDescription" id="SubMenuDescription" rows="10" class="w-100">                
+            </textarea>
+                    <br />
+                    <br />
+                    <div class="input-group w-100">
+                        <div class="input-group-prepend w-50">
+                            <img id="SubMenuImage" />
+                        </div>
+                        <div class="custom-file w-50">
+                            <label class="custom-file-label" for="SubMenuImageBrowser">Dosya Sec</label>
+                            <input type="file" class="custom-file-input" id="SubMenuImageBrowser" />
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <button class=" w-100" onclick="updateSubMenu()">Tamam</button>
+
+                </div>
+                <div class="container-fluid" id="divSubMenuAdd">
+                    <div>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ana Menu</label>
+                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="MainMenusAdd">
+                        </select>
+
+                    </div>
+                    <br />
+                    <input type="text" id="SubMenuTitleAdd" name="SubMenuTitleAdd" class="w-100" placeholder="Baslik Gir" />
+                    <br />
+                    <br />
+                    <lable for="editor2">İçerik</lable>
+                    <textarea name="editor2" id="editor2" rows="10" cols="80">                
+            </textarea>
+                    <br />
+                    <br />
+                    <lable for="SubMenuDescriptionAdd">Açıklama</lable>
+                    <textarea name="SubMenuDescriptionAdd" id="SubMenuDescriptionAdd" rows="10" class="w-100">                
+            </textarea>
+                    <br />
+                    <br />
+                    <div class="input-group w-100">
+                        <div class="input-group-prepend w-50">
+                            <img id="SubMenuImageAdd" />
+                        </div>
+                        <div class="custom-file w-50">
+                            <label class="custom-file-label" for="SubMenuImageBrowserAdd">Dosya Sec</label>
+                            <input type="file" class="custom-file-input" id="SubMenuImageBrowserAdd" />
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <button class=" w-100" onclick="addSubMenu()">Tamam</button>
+                </div>
+                <div class="container-fluid" id="divSubMenuDelete">
+
+                    <div>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ana Menu</label>
+                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="MainMenusDelete">
+                        </select>
+
+                    </div>
+                    <br />
+                    <div>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Alt Menu</label>
+                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="SubMenusDelete">
+                        </select>
+
+                    </div>
+                    <br />
+                    <br />
+                    <button class=" w-100" onclick="deleteSubMenu()">Sil</button>
+
+                </div>
+
+                <!--Hakkımızda-->
+                <div class="container-fluid" id="divAbout">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-2">
+                                <div class="card-body">
+                                    <div>
+                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Dil Seç</label>
+                                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="languages">
+                                        </select>
+
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <label class="my-1 mr-2" for="AboutHtml">Html</label>
+                                    <textarea name="AboutHtml" id="AboutHtml" rows="10" class="w-100">                
+            </textarea>
+                                    <br />
+                                    <br />
+                                    <div class="input-group w-100">
+                                        <div class="input-group-prepend w-50">
+                                            <img class="w-100" id="AboutImage" />
+                                        </div>
+                                        <div class="custom-file w-50">
+                                            <label class="custom-file-label" for="AboutImageBrowserAdd">Dosya Sec</label>
+                                            <input type="file" class="custom-file-input" id="AboutImageBrowserAdd" />
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <button type="button" id="aboutSave" class="w-100" onclick="SaveAbout()">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Iletişim-->
+                <div class="container-fluid" id="divContact">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-2">
+                                <div class="card-body">
+                                    <div>
+                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Contacts</label>
+                                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="Contacts">
+                                            <option selected>Seç</option>
+                                            <option value="0">İlk İletişim</option>
+                                            <option value="1">İkinci İletişim</option>
+                                        </select>
+
+                                    </div>
+                                    <input type="hidden" id="TextForContactId" />
+                                    <div class="form-group">
+                                        <label for="TextForTitle">Başlık:</label>
+                                        <input type="text" class="form-control" id="TextForTitle" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForAddress">Adres:</label>
+                                        <input type="text" class="form-control" id="TextForAddress" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForTelephone">Telefon No:</label>
+                                        <input type="text" class="form-control" id="TextForTelephone" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForFax">Fax No:</label>
+                                        <input type="text" class="form-control" id="TextForFax" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForEmail">Email:</label>
+                                        <input type="text" class="form-control" id="TextForEmail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForLocation">Lokasyon:</label>
+                                        <input type="text" class="form-control" id="TextForLocation" />
+                                    </div>
+                                    <button type="button" id="contactSave" class="w-100" onclick="SaveContact()">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Social Media-->
+                <div class="container-fluid" id="divSocialMedia">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-2">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="TextForLinkedin">Linkedin:</label>
+                                        <input type="text" class="form-control" id="TextForLinkedin" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForInstagram">Instagram:</label>
+                                        <input type="text" class="form-control" id="TextForInstagram" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForFacebook">Facebook:</label>
+                                        <input type="text" class="form-control" id="TextForFacebook" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForTwitter">Twitter:</label>
+                                        <input type="text" class="form-control" id="TextForTwitter" />
+                                    </div>
+                                    <button type="button" id="contactSave" class="w-100" onclick="SaveSocialMedia()">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Mail-->
+                <div class="container-fluid" id="divMail">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-2">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="TextForLinkedin">Email:</label>
+                                        <input type="text" class="form-control" id="TextForMailEmail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForInstagram">Host:</label>
+                                        <input type="text" class="form-control" id="TextForMailHost" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForFacebook">Password:</label>
+                                        <input type="text" class="form-control" id="TextForMailPassword" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForTwitter">Port:</label>
+                                        <input type="number" class="form-control" id="TextForMailPort" />
+                                    </div>
+                                    <button type="button" id="contactSave" class="w-100" onclick="SaveMail()">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Meta-->
+                <div class="container-fluid" id="divMeta">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-2">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="TextForMetaTitle">Başlık:</label>
+                                        <input type="text" class="form-control" id="TextForMetaTitle" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForMetaAuthor">Yazar:</label>
+                                        <input type="text" class="form-control" id="TextForMetaAuthor" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForMetaKeywords">Keywords:</label>
+                                        <input type="text" class="form-control" id="TextForMetaKeywords" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForMetaDescription">Açıklama:</label>
+                                        <input type="text" class="form-control" id="TextForMetaDescription" />
+                                    </div>
+                                    <button type="button" id="contactSave" class="w-100" onclick="SaveMeta()">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Meta-->
+                <div class="container-fluid" id="divMeta">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-2">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="TextForMetaTitle">Başlık:</label>
+                                        <input type="text" class="form-control" id="TextForMetaTitle" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForMetaAuthor">Yazar:</label>
+                                        <input type="text" class="form-control" id="TextForMetaAuthor" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForMetaKeywords">Keywords:</label>
+                                        <input type="text" class="form-control" id="TextForMetaKeywords" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TextForMetaDescription">Açıklama:</label>
+                                        <input type="text" class="form-control" id="TextForMetaDescription" />
+                                    </div>
+                                    <button type="button" id="contactSave" class="w-100" onclick="SaveMeta()">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.container-fluid -->
+            </div>
+            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Kapat</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="" id="imagepreview" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Dijinazor 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Bootstrap core JavaScript-->
+    <script src="adminJs/jquery.min.js"></script>
+    <script src="adminJs/jquery.dataTables.min.js"></script>
+
+    <script src="adminJs/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="adminJs/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="adminJs/sb-admin-2.min.js"></script>
+    <script src="adminJs/dataTables.bootstrap4.min.js"></script>
+    <script src="adminJs/admin.js"></script>
+    <script src="adminJs/ckeditor//ckeditor.js"></script>
+    <script src="adminJs/editory.js"></script>
+
+    <!-- Page level plugins -->
+    <!--<script src="vendor/chart.js/Chart.min.js"></script>-->
+    <!-- Page level custom scripts -->
+    <!--<script src="js/demo/chart-area-demo.js"></script>-->
+    <!--<script src="js/demo/chart-pie-demo.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,2 @@
+ReflectedHttpActionDescriptor.ExecuteAsync => <>c__DisplayClass6_0.<GetExecutor>b__0 => SubMenuController.Post Hata=>Nesne baþvurusu bir nesnenin örneðine ayarlanmadý. StackTrace=>   konum: Esis.Controllers.SubMenuController.Post(SubMenu subMenu) C:\Users\veysel\source\repos\Esis\Esis\Controllers\SubMenuController.cs içinde: satýr 47
+30,942 | ERROR | Hata=>Nesne baþvurusu bir nesnenin örneðine ayarlanmadý. StackTrace=>   konum: Esis.Controllers.SubMenuController.Post(SubMenu subMenu) C:\Users\veysel\source\repos\Esis\Esis\Controllers\SubMenuController.cs içinde: satýr 47

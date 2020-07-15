@@ -1,0 +1,114 @@
+.container-fluid1 {
+    width: 100%;
+}
+	html,
+body {
+ height: 100%;
+ position: relative;
+}
+	.sticky.is-sticky {
+   position:fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+.sticky + .content {
+  padding-top: 60px;
+}
+footer{
+bottom:0;
+left:0;
+
+width:100%
+}
+.megamenu-li {
+	position: static;
+}
+
+.megamenu {
+	position: absolute;
+	width: 50%;
+	left: 0;
+	right: 0;
+	padding: 15px;
+}
+
+
+
+#service{
+	padding:83px 0px;
+	}
+
+.service_area{
+	padding:40px 0 40px; 
+	}
+	
+.service_section{
+	}
+	
+.service_block{
+	text-align:center;
+	padding-left: 15px;
+    padding-right: 15px;
+	}
+	
+.service_icon{
+	border:2px solid #f56eab;
+	border-radius:50%;
+	width:90px;
+	height:90px;
+	margin:0px auto 25px;
+	}
+	
+.service_icon.icon2{
+	border:2px solid #7cc576;
+	}
+	
+.service_icon.icon3{
+	border:2px solid #49b5e7;
+	}
+	
+.service_icon span {
+    background:#f56eab;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.service_icon.icon2 span {
+    background:#7cc576;
+}
+.service_icon.icon3 span{
+    background:#49b5e7;
+	}
+.service_icon i{
+	color: #fff;
+    font-size: 40px;
+    margin-top: 0;
+    position: relative;
+    top: 14px;
+    z-index: 20;
+	}
+	
+.service_block h3{
+	font-family: 'Dosis';
+	font-weight: 600;
+	font-size:18px;
+	color:#111111;
+	margin:35px 0 18px;
+	}
+	
+.service_block p{
+	font-size:16px;
+	color:#888888;
+	margin:0px;
+	}
+	.testSize{
+	
+	width:250px;
+	}
