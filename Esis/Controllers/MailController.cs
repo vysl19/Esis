@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class MailController : ApiController
+    public class MailController : BaseController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         // GET: api/About
@@ -36,6 +36,7 @@ namespace Esis.Controllers
         {
             try
             {
+                ValidateLogin(mail);
                 var mailRepository = new MailRepository();
                 mailRepository.Update(mail);
             }

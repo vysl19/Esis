@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Enity
 {
-    public class Meta
+    public class Meta : User
     {
         /// <summary>
         /// Title

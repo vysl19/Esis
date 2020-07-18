@@ -597,7 +597,7 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\language.js" />
-    <Content Include="js\Login.js" />
+    <Content Include="adminJs\Login.js" />
     <Content Include="js\Menu.js" />
     <Content Include="js\Menu2.js" />
     <Content Include="js\Meta.js" />
@@ -606,6 +606,7 @@
     <Content Include="js\socialMedia.js" />
     <Content Include="js\string.js" />
     <Content Include="js\wow.js" />
+    <Content Include="login.html" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -633,10 +634,13 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CacheController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\MetaController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\StringController.cs" />
     <Compile Include="Controllers\SubMenuController.cs" />

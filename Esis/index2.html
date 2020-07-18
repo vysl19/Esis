@@ -390,8 +390,8 @@
                                         <table class="table-borderless contact-bg-color col-12">
                                             <thead>
                                                 <tr class="m-0 p-0">
-                                                    <th class="mainTitleColor">
-                                                        BİZİMLE İLETİŞİME GEÇİN
+                                                    <th class="mainTitleColor" data-text="TitleForContact">
+                                                        <!--BİZİMLE İLETİŞİME GEÇİN-->
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -399,35 +399,35 @@
                                                 <tr class="m-0 p-0">
                                                     <td>
                                                         <div class="form-group">
-                                                            <label class="m-0 p-0" for="NameSurname" title="NameSurname">AD-SOYAD:</label>
-                                                            <input class="form-control" id="NameSurname" name="NameSurname" />
+                                                            <label class="m-0 p-0" for="NameSurname" title="NameSurname" data-text="LabelForNameSurname"><!--AD-SOYAD:--></label>
+                                                            <input class="form-control" id="ContactNameSurname" name="NameSurname" />
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr class="m-0 p-0">
                                                     <td>
                                                         <div class="form-group">
-                                                            <label class="m-0 p-0" Title="Email" for="Email">E-MAIL ADRES:</label>
-                                                            <input class="form-control" id="Email" name="Email" />
+                                                            <label class="m-0 p-0" Title="Email" for="Email" data-text="LabelForEmail"><!--E-MAIL ADRES:--></label>
+                                                            <input class="form-control" id="ContactEmail" name="Email" />
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr class="m-0 p-0">
                                                     <td>
                                                         <div class="form-group">
-                                                            <label class="m-0 p-0" for="PhoneNumber" title="PhoneNumber">TELEFON NUMARASI:</label>
-                                                            <input class="form-control" id="Email" name="Email" />
+                                                            <label class="m-0 p-0" for="PhoneNumber" title="PhoneNumber" data-text="LabelForPhoneNumber"><!--TELEFON NUMARASI:--></label>
+                                                            <input class="form-control" id="ContactPhoneNumber" name="PhoneNumber" />
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr class="m-0 p-0">
                                                     <td>
                                                         <div class="form-group">
-                                                            <label class="m-0 p-0" for="Message" title="Message">MESAJINIZ:</label>
-                                                            <textarea class="form-control" rows="5" id="Message" name="Message"></textarea>
+                                                            <label class="m-0 p-0" for="Message" title="Message" data-text="LabelForMessage"><!--MESAJINIZ:--></label>
+                                                            <textarea class="form-control" rows="5" id="ContactMessage" name="Message"></textarea>
                                                         </div>
                                                         <div class="row">
-                                                            <button type="submit" class="btn mainBackgroundColor text-white mx-auto">GÖNDER</button>
+                                                            <button type="submit" class="btn mainBackgroundColor text-white mx-auto" onclick="SendMail()" data-text="ButtonForSend"><!--GÖNDER--></button>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -485,20 +485,20 @@
                 </div>-->
             </div>
             <div class="row">
-                <span class="mx-auto" id="FooterRight">&#169; Tüm Hakları Saklıdır</span>
+                <span class="mx-auto" data-text="FooterText">&#169; </span>
             </div>
         </div>
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/string.js"></script>
     <script src="js/homePage2.js"></script>
     <script src="js/contact2.js"></script>
     <script type="module" src="js/Menu2.js"></script>
     <script src="js/about2.js"></script>
     <script src="js/socialMedia.js"></script>
     <script src="js/Meta.js"></script>
-    <script src="js/string.js"></script>
     <!--<script src="js/slim.min.js"></script>-->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

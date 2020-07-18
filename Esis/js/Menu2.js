@@ -71,11 +71,11 @@
         switch (divId) {
             case "Service":
                 list = services.List;
-                title = "ANA HİZMET ALANLARIMIZ";
+                title = page.Methods.GetString("OurMainServices");
                 break;
             case "Sector":
                 list = sectors.List;
-                title = "SEKTÖRLER";
+                title = page.Methods.GetString("Sectors");
                 break;
             case "Contact":
             //$("div#footerContact").css("display", "none");

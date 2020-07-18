@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class StringController : ApiController
+    public class StringController : BaseController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         // GET: api/SubMenu
@@ -35,6 +35,7 @@ namespace Esis.Controllers
         {
             try
             {
+                ValidateLogin(sm);
                 var subMenuRepository = new StringRepository();               
                 subMenuRepository.Upsert(sm);
             }

@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class SocialMediaController : ApiController
+    public class SocialMediaController : BaseController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         // GET: api/About
@@ -36,6 +36,7 @@ namespace Esis.Controllers
         {
             try
             {
+                ValidateLogin(socialMedia);
                 var socialMediaRepository = new SocialMediaRepository();
                 socialMediaRepository.Update(socialMedia);
             }

@@ -12,7 +12,7 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class SubMenuController : ApiController
+    public class SubMenuController : BaseController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         // GET: api/SubMenu
@@ -43,6 +43,7 @@ namespace Esis.Controllers
         {
             try
             {
+                ValidateLogin(subMenu);
                 var subMenuRepository = new SubMenuRepository();
                 if (subMenu.Image.IndexOf(Constants.Base64String) >= 0)
                 {
@@ -74,12 +75,13 @@ namespace Esis.Controllers
 
         
         [HttpPost]       
-        public void Delete(int id)
+        public void Delete([FromBody] SubMenu subMenu)
         {
             try
             {
+                ValidateLogin(subMenu);
                 var subMenuRepository = new SubMenuRepository();
-                subMenuRepository.Delete(id);
+                subMenuRepository.Delete(subMenu.Id);
             }
             catch (Exception e)
             {

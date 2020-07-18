@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Enity
 {
-    public class SubMenu
+    public class SubMenu : User
     {
         /// <summary>
         /// Id
@@ -16,7 +16,7 @@ namespace Data.Enity
         /// <summary>
         /// MenuId
         /// </summary>
-        public int MenuId {get; set; }
+        public int MenuId { get; set; }
 
         /// <summary>
         /// Html

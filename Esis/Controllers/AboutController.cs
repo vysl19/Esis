@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class AboutController : ApiController
+    public class AboutController : BaseController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         // GET: api/About
@@ -37,6 +37,7 @@ namespace Esis.Controllers
         {
             try
             {
+                ValidateLogin(about);
                 var aboutRepository = new AboutRepository();
                 if (about.Image.IndexOf(Constants.Base64String) >= 0)
                 {

@@ -62,7 +62,7 @@
                 </a>
             </li>
             <!--Con
-    <!--Hakkımızda-->
+            <!--Hakkımızda-->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" id="aAbout">
                     <i class="fas fa-fw fa-folder"></i>
@@ -391,33 +391,54 @@
                     </div>
                 </div>
 
-                <!--Meta-->
-                <div class="container-fluid" id="divMeta">
+                <!--Translate-->
+                <div class="container-fluid" id="divTranslate">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card mb-2">
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="TextForMetaTitle">Başlık:</label>
-                                        <input type="text" class="form-control" id="TextForMetaTitle" />
+                                        <label for="TextForTranslateTitle">Id:</label>
+                                        <input type="text" class="form-control" id="TextForTranslateTitle" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="TextForMetaAuthor">Yazar:</label>
-                                        <input type="text" class="form-control" id="TextForMetaAuthor" />
+                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Dil Seç</label>
+                                        <select class="custom-select my-1 mr-sm-2 service-bg-color1 text-white my-2" id="TranslateLanguages">
+                                            <option selected>Seç</option>
+                                            <option value="tr">Türkçe</option>
+                                            <option value="en">İngilizce</option>
+                                        </select>
+
                                     </div>
                                     <div class="form-group">
-                                        <label for="TextForMetaKeywords">Keywords:</label>
-                                        <input type="text" class="form-control" id="TextForMetaKeywords" />
+                                        <label for="TextForMetaKeywords">Text:</label>
+                                        <input type="text" class="form-control" id="TextForTranslateText" />
                                     </div>
-                                    <div class="form-group">
-                                        <label for="TextForMetaDescription">Açıklama:</label>
-                                        <input type="text" class="form-control" id="TextForMetaDescription" />
-                                    </div>
-                                    <button type="button" id="contactSave" class="w-100" onclick="SaveMeta()">Kaydet</button>
+                                    <button type="button" id="contactSave" class="w-100" onclick="SaveTranslate()">Kaydet</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container-fluid" id="divTranslatationList">
+                    
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Id
+                                        </th>
+                                        <th>
+                                            Dil
+                                        </th>
+                                        <th>
+                                            Çeviri
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="TranslationList">
+                                </tbody>
+                            </table>                        
                 </div>
 
                 <!-- /.container-fluid -->

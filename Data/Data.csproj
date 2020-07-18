@@ -46,6 +46,7 @@
     <Compile Include="Enity\Content.cs" />
     <Compile Include="Enity\Mail.cs" />
     <Compile Include="Enity\Meta.cs" />
+    <Compile Include="Enity\Notification.cs" />
     <Compile Include="Enity\SocialMedia.cs" />
     <Compile Include="Enity\String.cs" />
     <Compile Include="Enity\Menu.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Repository\ContactRepository.cs" />
     <Compile Include="Repository\ContentRepository.cs" />
     <Compile Include="Repository\MailRepository.cs" />
+    <Compile Include="Repository\MailRequestRepository.cs" />
     <Compile Include="Repository\MenuRepository.cs" />
     <Compile Include="Repository\MetaRepository.cs" />
     <Compile Include="Repository\SocialMediaRepository.cs" />

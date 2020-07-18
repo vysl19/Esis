@@ -1,5 +1,5 @@
-﻿using Business.Cache;
-using Data.Enity;
+﻿using Data.Enity;
+using Data.Repository;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -10,24 +10,24 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class CacheController : BaseController
+    public class LoginController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-
-        // POST: api/Cache
+        // POST: api/Login
         [HttpPost]
-        public void Clear(User user)
+        public bool Post([FromBody] User user)
         {
             try
             {
-                ValidateLogin(user);
-                SubMenuCache.GetInstance().Reload();
-                StringCache.GetInstance().Reload();
+                var userRepository = new UserRepository();
+                return userRepository.Login(user);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 logger.Error(string.Format("Hata=>{0} StackTrace=>{1}", e.Message, e.StackTrace));
-            }            
-        }        
+            }
+            return false;
+        }
+
     }
 }

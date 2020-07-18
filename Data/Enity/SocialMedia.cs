@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Enity
 {
-    public class SocialMedia
+    public class SocialMedia : User
     {
         /// <summary>
         /// Twitter

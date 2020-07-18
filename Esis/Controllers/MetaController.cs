@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace Esis.Controllers
 {
-    public class MetaController : ApiController
+    public class MetaController : BaseController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         // GET: api/About
@@ -36,6 +36,7 @@ namespace Esis.Controllers
         {
             try
             {
+                ValidateLogin(meta);
                 var metaRepository = new MetaRepository();
                 metaRepository.Update(meta);
             }

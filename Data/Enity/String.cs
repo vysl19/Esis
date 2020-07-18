@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Data.Enity
 {
-    public class SM 
-    {       
+    public class SM : User
+    {
 
         /// <summary>
         /// Language

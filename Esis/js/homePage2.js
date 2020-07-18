@@ -1,11 +1,4 @@
-﻿var services = {};
-services.Title = "ANA HİZMET ALANLARIMIZ";
-services.List = [];
-
-var sectors = {};
-sectors.Title = "SEKTÖRLER";
-sectors.List = [];
-(function ($) {
+﻿(function ($) {
     //var services = {
     //    Title: "ANA HİZMET ALANLARIMIZ",
     //    List: [

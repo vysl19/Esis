@@ -42,7 +42,7 @@
         var text = "<table>"
         for (var i = 0; i < list.length; i++) {
             text += "<thead><tr>";
-            text += "<th class='col-12'>" + list[i].Title + "</th></tr></thead>";
+            text += "<th class='col-12'>" + list[i].Title + " " + page.Methods.GetString("Branch") + "</th></tr></thead>";
             text += "<tbody>";
             text += '<tr><td class="col-12"><i class="fa fa-phone mr-1" aria-hidden="true"></i>' + list[i].Telephone + "</td></tr>";
             text += '<tr><td class="col-12"><i class="fa fa-fax mr-1" aria-hidden="true"></i>' + list[i].Fax + "</td></tr>";
@@ -70,6 +70,38 @@
         //'</ul>'
 
         //$("#leftTopSocial").append(text);
-        
+
     }
+
 })(jQuery);
+function SendMail() {
+    var data = {};
+    data.NameSurname = $("#ContactNameSurname").val();
+    data.Email = $("#ContactEmail").val();
+    data.PhoneNumber = $("#ContactPhoneNumber").val();
+    data.Message = $("#ContactMessage").val();
+
+    if (data.NameSurname == "") {
+        alert("Isim alanı boş olamaz");
+        return;
+    }
+    if (data.Email == "") {
+        alert("Email alanı boş olamaz");
+        return;
+    }
+    if (data.PhoneNumber == "") {
+        alert("Telefon alanı boş olamaz");
+        return;
+    }
+    if (data.Message == "") {
+        alert("Message alanı boş olamaz");
+        return;
+    }
+    $.post('api/Notification', data)
+        .done(function (response) {
+            alert("Islem Yapıldı");
+        })
+        .fail(function (e) {
+            alert("Islem Yapıldı");
+        });
+}

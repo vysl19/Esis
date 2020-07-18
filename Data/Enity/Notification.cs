@@ -6,32 +6,31 @@ using System.Threading.Tasks;
 
 namespace Data.Enity
 {
-    public class About : User
+    public class Notification
     {
         /// <summary>
-        /// Id
+        /// NameSurname
         /// </summary>
-        public int Id { get; set; }
+        public string NameSurname { get; set; }
 
         /// <summary>
-        /// Language
+        /// Email
         /// </summary>
-        public string Language { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
-        /// Html
+        /// PhoneNumber
         /// </summary>
-        public string Html { get; set; }
+        public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Title
+        /// Message
         /// </summary>
-        public string Title { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
-        /// Image
+        /// Ip
         /// </summary>
-        public string Image { get; set; }
-
+        public string Ip { get; set; }
     }
 }

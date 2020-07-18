@@ -9,6 +9,9 @@ var languages = [{ "Code": "tr", "Title": "Türkçe" }, { "Code": "en", "Title":
 var about = {};
 var contacts = [];
 $(function () {
+    if (!sessionStorage.getItem("Login")) {
+        window.location.href = "./login.html";
+    }
     CloseOtherPanelsAndOpenPanel("divSubMenu");
     $("#aSubMenu").click(function () {
         CloseOtherPanelsAndOpenPanel("divSubMenu");
@@ -41,8 +44,18 @@ $(function () {
         CloseOtherPanelsAndOpenPanel("divMeta");
 
     });
+    $("#aTranslate").click(function () {
+        CloseOtherPanelsAndOpenPanel("divTranslate");
+    });
+    $("#aTranslationList").click(function () {
+        CloseOtherPanelsAndOpenPanel("divTranslatationList");
+    });
+
     $("#aCache").click(function () {
-        $.post('api/Cache')
+        var data = {};
+        data.UserName = sessionStorage.getItem("UserName");
+        data.Password = sessionStorage.getItem("Password");
+        $.post('api/Cache', data)
             .done(function (response) {
                 alert("Islem Yapıldı");
                 location.reload();
@@ -60,6 +73,7 @@ $(function () {
     LoadSocialMedia();
     LoadMail();
     LoadMeta();
+    GetTranslationList();
     $("#MainMenus, #MainMenusDelete").change(function () {
         setSubMenu();
     });
@@ -201,9 +215,12 @@ function updateSubMenu() {
     data.Title = $("#SubMenuTitle").val();
     data.Html = CKEDITOR.instances.editor1.getData();
     data.Image = $("#SubMenuImage").attr("src");
-    $.post('api/SubMenu', data)
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
+
+    $.post('api/SubMenu/Post', data)
         .done(function (response) {
-            alert("Islem Yapıldı");            
+            alert("Islem Yapıldı");
         })
         .fail(function (e) {
             alert("Hata alındı");
@@ -216,6 +233,9 @@ function addSubMenu() {
     data.Html = CKEDITOR.instances.editor2.getData();
     data.Image = $("#SubMenuImageAdd").attr("src");
     data.MenuId = $("#MainMenusAdd option:selected").attr("value");
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
+
     if (data.Description == "") {
         alert("Açiklama alanı boş olamaz");
         return;
@@ -232,9 +252,9 @@ function addSubMenu() {
         alert("Image alanı boş olamaz");
         return;
     }
-    $.post('api/SubMenu', data)
+    $.post('api/SubMenu/Post', data)
         .done(function (response) {
-            alert("Islem Yapıldı");            
+            alert("Islem Yapıldı");
         })
         .fail(function (e) {
             alert("Hata alındı");
@@ -259,9 +279,13 @@ function LoadAbout() {
 }
 function deleteSubMenu() {
     var id = $("#SubMenusDelete option:selected").attr("value");
-    $.post('api/SubMenu/' + id)
+    var data = {};
+    data.Id = id;
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
+    $.post('api/SubMenu/Delete', data)
         .done(function (response) {
-            alert("Islem Yapıldı");            
+            alert("Islem Yapıldı");
         })
         .fail(function (e) {
             alert("Hata alındı");
@@ -303,6 +327,8 @@ function SaveAbout() {
     data.Language = $("#languages option:selected").attr("value");
     data.Html = CKEDITOR.instances.AboutHtml.getData();
     data.Image = $("#AboutImage").attr("src");
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
     if (!data.Language) {
         alert("Dil kodu seçilmeili");
         return;
@@ -333,6 +359,8 @@ function SaveContact() {
     data.Telephone = $("#TextForTelephone").val();
     data.Address = $("#TextForAddress").val();
     data.Mail = $("#TextForEmail").val();
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
     if (data.Id > 0) {
         if (data.Location == "") {
             alert("Location alanı boş olamaz");
@@ -375,6 +403,8 @@ function SaveSocialMedia() {
     data.Instagram = $("#TextForInstagram").val();
     data.Facebook = $("#TextForFacebook").val();
     data.Twitter = $("#TextForTwitter").val();
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
     if (data.Linkedin == "") {
         alert("Linkedin alanı boş olamaz");
         return;
@@ -446,11 +476,13 @@ function LoadMeta() {
         });
 }
 function SaveMail() {
-    var data = {};    
+    var data = {};
     data.Email = $("#TextForMailEmail").val();
     data.Host = $("#TextForMailHost").val();
     data.Port = $("#TextForMailPort").val();
-    data.Password = $("#TextForMailPassword").val();    
+    data.Password = $("#TextForMailPassword").val();
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
     if (data.Email == "") {
         alert("Email alanı boş olamaz");
         return;
@@ -482,6 +514,8 @@ function SaveMeta() {
     data.Author = $("#TextForMetaAuthor").val();
     data.Description = $("#TextForMetaDescription").val();
     data.Keywords = $("#TextForMetaKeywords").val();
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
     if (data.Title == "") {
         alert("Title alanı boş olamaz");
         return;
@@ -505,5 +539,52 @@ function SaveMeta() {
         })
         .fail(function (e) {
             alert("Hata alındı");
+        });
+}
+function SaveTranslate() {
+    var data = {};
+    data.Language = $("#TranslateLanguages option:selected").attr("value");
+    data.Title = $("#TextForTranslateTitle").val();
+    data.Text = $("#TextForTranslateText").val();
+    data.UserName = sessionStorage.getItem("UserName");
+    data.Password = sessionStorage.getItem("Password");
+    if (data.Language == "") {
+        alert("Dil seçimi Yapmalısınız");
+        return;
+    }
+    if (data.Title == "") {
+        alert("Id alanı boş olamaz");
+        return;
+    }
+    if (data.Text == "") {
+        alert("Text alanı boş olamaz");
+        return;
+    }
+    $.post('api/String', data)
+        .done(function (response) {
+            alert("Islem Yapıldı");
+            location.reload();
+        })
+        .fail(function (e) {
+            alert("Hata alındı");
+        });
+}
+function GetTranslationList() {
+    $.get('api/String', function () {
+    })
+        .done(function (response) {
+            var text = "";
+            $("#TranslationList").html();
+            for (var key in response) {
+                var arrKey = key.split("-");
+                text += "<tr>";
+                text += "<td>" + arrKey[0] + "</td>";
+                text += "<td>" + arrKey[1] + "</td>";
+                text += "<td>" + response[key] + "</td>";
+                text += "</tr>";
+            }
+            $("#TranslationList").append(text);
+        })
+        .fail(function (e) {
         });
 }

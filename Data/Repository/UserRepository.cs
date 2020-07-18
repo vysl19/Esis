@@ -8,21 +8,17 @@ using System.Threading.Tasks;
 
 namespace Data.Repository
 {
-    public interface IUserRepository
+    public class UserRepository :BaseRepository
     {
-        bool Login(IUser user);
-    }
-    public class UserRepository :BaseRepository, IUserRepository
-    {
-        public bool Login(IUser user)
+        public bool Login(User user)
         {            
             using (conn)
             {
                 using (cmd)
                 {
                     conn.Open();
-                    cmd.CommandText = "dbo.USER_SELECT";
-                    cmd.Parameters.AddWithValue("@USER_NAME", user.UserName);
+                    cmd.CommandText = "dbo.USERS_SELECT";
+                    cmd.Parameters.AddWithValue("@NAME", user.UserName);
                     cmd.Parameters.AddWithValue("@PASSWORD", user.Password);
                 }
                 using (SqlDataReader reader = cmd.ExecuteReader())

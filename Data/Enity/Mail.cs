@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Enity
 {
-   public class Mail
+    public class Mail : User
     {
         /// <summary>
         /// Email
